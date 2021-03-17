@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "6d5e38a4-d3dd-4f73-83b8-fa8d0f837cb0",
+		"name": "WhatAppApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\":\"test_user\",\n    \"email\":\"test@mailinator.com\",\n    \"password\":\"test1122\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/signup",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@mailinator.com\",\n    \"password\":\"test112233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/signIn",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"about\":\"Am a test user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/update/6050f08bd55fd52572546d9e",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"update",
+						"6050f08bd55fd52572546d9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forget",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"oldPassword\":\"test1122\",\n    \"newPassword\":\"test112233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/forget/6050f08bd55fd52572546d9e",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"forget",
+						"6050f08bd55fd52572546d9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@mailinator.com\",\n    \"password\":\"test112233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/6050f08bd55fd52572546d9e",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"6050f08bd55fd52572546d9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/users/all",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/users/6050f08bd55fd52572546d9e",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"6050f08bd55fd52572546d9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one by email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/users/email/test@mailinator.com",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"email",
+						"test@mailinator.com"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:4000"
+		},
+		{
+			"key": "DUMP",
+			"value": "https://whatsapp137.herokuapp.com"
+		}
+	]
+}
